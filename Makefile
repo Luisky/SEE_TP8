@@ -11,8 +11,8 @@ GCC_CROSS := $(BR_OUTPUT)host/usr/bin/arm-linux-gnueabihf-gcc
 # source and compile only the modules in the PWD (local) directory.
 default:
 	mkdir -p xbuild
-	$(GCC_CROSS) -o xbuild/data_harvester src/main.c -I lib/
-	$(GCC_CROSS) -o xbuild/init_kp src/init_kp.c -I lib/
+	$(GCC_CROSS) -o xbuild/switch_kp	src/main.c	-I lib/
+	$(GCC_CROSS) -o xbuild/init_kp		src/init_kp.c	-I lib/
 
 .PHONY: clean
 clean:
