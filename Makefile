@@ -11,9 +11,12 @@ GCC_CROSS := $(BR_OUTPUT)host/usr/bin/arm-linux-gnueabihf-gcc
 # source and compile only the modules in the PWD (local) directory.
 default:
 	mkdir -p xbuild
+	mkdir -p build
 	$(GCC_CROSS) -o xbuild/switch_kp	src/main.c	-I lib/
 	$(GCC_CROSS) -o xbuild/init_kp		src/init_kp.c	-I lib/
+	gcc -o build/ping_burst	src/ping_burst.c	-lpthread
 
 .PHONY: clean
 clean:
 	$(RM) -rf xbuild/*
+	$(RM) -rf build/

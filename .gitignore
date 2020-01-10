@@ -1,5 +1,6 @@
 .vscode/
 xbuild/
+build/
 rapport/*
 !rapport/main.tex
 patch-5.2.21-rt13.patch.xz
