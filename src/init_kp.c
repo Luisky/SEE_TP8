@@ -23,7 +23,7 @@ int main(void)
 	// copy S99tp8.sh by using add_init.sh
 	system(ADDINIT);
 	// copy the first kernel and reboot
-	system(SHZI(MNTCPY, ZI_0));
+	system(SHZI(SH_ZIMG, ZI_0));
 
 	return EXIT_SUCCESS;
 }

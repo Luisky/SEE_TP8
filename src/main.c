@@ -28,21 +28,22 @@ int main(void)
 
 	switch (kernel_preempt) {
 	case '1':
-		system(SHZI(MNTCPY, ZI_1));
+		system(SHZI(SH_ZIMG, ZI_1));
 		break;
 	case '2':
-		system(SHZI(MNTCPY, ZI_2));
+		system(SHZI(SH_ZIMG, ZI_2));
 		break;
 	case '3':
-		system(SHZI(MNTCPY, ZI_3));
+		system(SHZI(SH_ZIMG, ZI_3));
 		break;
 	case '4':
-		system(SHZI(MNTCPY, ZI_4));
+		system(SHZI(SH_ZIMG, ZI_4));
 		break;
 	case '5':
 		if (remove(KP_FILE) == -1)
 			perr_exit("remove");
 		system(RMINIT);
+		system(RUN_K2K);
 		break;
 	default:
 		errx(EXIT_FAILURE, "can't read which kernel to run !!!\n");
